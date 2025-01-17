@@ -1,6 +1,19 @@
-const answers = [];
-answers[0] = prompt(" what your name ", "");
-answers[1] = prompt(" what your lastname ", "");
-answers[2] = prompt(" how your age ", "");
+console.log(3 + +"2")
 
-document.write(answers);
+let incr = 10,
+decr = 10;
+
+// ++incr
+// --decr
+
+console.log(++incr);
+console.log(--decr);
+
+
+console.log(222 === 2);
+
+
+const isCheck = false,
+isClose = false;
+
+console.log(isCheck || !isClose);
