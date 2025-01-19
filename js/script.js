@@ -1,19 +1,21 @@
-console.log(3 + +"2")
+const numberOfFilmns = +prompt(" how many movies have you watched ", ' ');
 
-let incr = 10,
-decr = 10;
-
-// ++incr
-// --decr
-
-console.log(++incr);
-console.log(--decr);
+const PersonalMovieDB ={
+    count: numberOfFilmns,  //нужно для того чтобы записать 1 ответ на вопрос
+    movies: {},
+    actors: {},
+    genres:[],
+    private: false 
 
 
-console.log(222 === 2);
+};
 
+const a = prompt(" last film ", ' '),
+ b = prompt(" what's the score ", " "),
+ c = prompt(" last film ", ' '),
+ d = prompt(" what's the score ", " ");
 
-const isCheck = false,
-isClose = false;
+ PersonalMovieDB.movies[a] = b;
+ PersonalMovieDB.movies[c] = d;
 
-console.log(isCheck || !isClose);
+ console.log(PersonalMovieDB);
