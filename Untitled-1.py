@@ -1,21 +1,20 @@
-import matplotlib.pyplot as plt
-import networkx as nx
+# New list of numbers provided by the user
+additional_numbers = [
+    1.19, 0.29, 9.32, 2.34, 1.10, 8.56, 5.32,
+    2.34, 1.10, 2.56, 6.24, 4.79, 5.92, 2.56,
+    6.24, 4.76, 5.92, 3.56, 0.22, 1.32, 2.51,
+    6.99, 4.87, 5.04, 3.17, 5.12, 3.38, 5.04,
+    3.17, 5.12, 3.38, 3.47, 0.92, 7.18, 3.15,
+    1.39, 1.18, 2.06, 11.98, 4.32, 5.88,
+    3.12, 3.47, 0.92, 7.18, 3.15, 1.39, 1.18,
+    2.06
+]
 
+# Create a DataFrame for the additional numbers
+df_additional = pd.DataFrame(additional_numbers, columns=["A"])
 
-# Создание графа для визуализации дерева решений двоичного поиска
-G = nx.DiGraph()
+# Save the new numbers to an Excel file
+file_path_additional = ("у.xlsx")
+df_additional.to_excel(file_path_additional, index=False)
 
-# Добавляем узлы (проверяемые числа на каждом шаге)
-nodes = ['5', '8', '3', '9']
-edges = [('5', '3'), ('5', '8'), ('8', '7'), ('8', '9')]
-
-# Добавляем вершины и ребра
-G.add_edges_from(edges)
-
-# Отрисовка дерева решений
-plt.figure(figsize=(10, 8))
-pos = nx.spring_layout(G)  # Позиционирование узлов
-nx.draw(G, pos, with_labels=True, node_size=700, node_color="lightblue", font_size=14, font_weight="bold", arrows=True)
-
-plt.title("Дерево решений для двоичного поиска (поиск числа 8)")
-plt.show()
+file_path_additional
