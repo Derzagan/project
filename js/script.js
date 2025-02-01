@@ -31,7 +31,7 @@ const a = prompt(" last film ", ' '),
 
 function rememberFilms(){
    for (let i = 0; i < 2; i++){
-      const a = prompt(" last film ", ' '),
+      const a = prompt(" last film ", ' ').trim(),
             b = prompt(" what's the score ", " ");
   
       
