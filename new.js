@@ -1,54 +1,27 @@
-const options = {
-    name: "test",
-    wight: 1024,
-    height: 1024,
-    colors: {
-        border: 'Black ',
-        bg: 'red'
+const box = document.getElementById('box'),
+btns = document.getElementsByTagName('button'),
+circles = document.getElementsByClassName('circle'),
+hearts = document.querySelectorAll('.heart'),
+oneHeart = document.querySelector('.heart'),
+wrapper = document.querySelector('.wrapper')
 
-    },
-    makeTest: function(){
-        console.log("test");
-    }
-};
+// box.style.backgroundColor = 'blue';
+// box.style.width = '500px';
 
-options.makeTest();
+box.style.cssText = 'background-color: blue; width: 500px'
 
-const {border, bg} = options.colors;
-console.log(border)
-
-// console.log(Object.keys(options).length);
-
-
-// console.log(options["colors"]["border"]);
-// delete options.name;
-// console.log(options);
+btns[1].style.borderRadius = '100%';
+circles[0].style.backgroundColor = 'red';
 
 
 
 
 
-// console.log(options["colors"]["border"]);
-// delete options.name;
-// console.log(options);
+hearts.forEach(item => {
+    item.style.backgroundColor = 'green'
+})
 
 
-// let counter = 0;
-// for (let key in options){
-//     if (typeof(options[key]) == 'object'){
-//         for( let i in options[key]){
-//             console.log("свойство ", i, "имеет значение ", options[key][i]);
-//             counter++;
+// circles[0].remove();
 
-//         }
-//     } else{
-//         console.log("свойство ", key, "имеет значение ", options[key])
-//         counter++;
-
-//     }
-// }
-// console.log(counter)
-
-
-
-
+// hearts[0].replaceWith(circles[0]);
