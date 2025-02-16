@@ -1,27 +1,18 @@
-const box = document.getElementById('box'),
-btns = document.getElementsByTagName('button'),
-circles = document.getElementsByClassName('circle'),
-hearts = document.querySelectorAll('.heart'),
-oneHeart = document.querySelector('.heart'),
-wrapper = document.querySelector('.wrapper')
+// console.log(document.body.firstChild);
+// console.log(document.body.lastChild);
 
-// box.style.backgroundColor = 'blue';
-// box.style.width = '500px';
+// console.log(document.body.firstElementChild);
 
-box.style.cssText = 'background-color: blue; width: 500px'
-
-btns[1].style.borderRadius = '100%';
-circles[0].style.backgroundColor = 'red';
+// console.log(document.querySelector('#current').parentNode);
+// console.log(document.querySelector('#current').parentElement);
 
 
 
+// console.log(document.querySelector('[data-current="3"]').nextElementSibling)
 
-
-hearts.forEach(item => {
-    item.style.backgroundColor = 'green'
-})
-
-
-// circles[0].remove();
-
-// hearts[0].replaceWith(circles[0]);
+for(let node of document.body.childNodes){
+    if(node.nodeName == '#text'){
+        continue;
+    }
+    console.log(node)
+};
