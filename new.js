@@ -1,18 +1,56 @@
-// console.log(document.body.firstChild);
-// console.log(document.body.lastChild);
-
-// console.log(document.body.firstElementChild);
-
-// console.log(document.querySelector('#current').parentNode);
-// console.log(document.querySelector('#current').parentElement);
 
 
+let students = {
+   js: [{
+    name: 'Jonh',
+    progress: 100
+   }, {
+    name: 'Ivan',
+    progress: 60
+   }],
 
-// console.log(document.querySelector('[data-current="3"]').nextElementSibling)
+   html: {
+    basic: [{
+        name: 'Peter',
+        progress: 20
+    }, {
+        name: 'Ann',
+        progress: 18
+    }],
 
-for(let node of document.body.childNodes){
-    if(node.nodeName == '#text'){
-        continue;
-    }
-    console.log(node)
+    pro: [{
+        name: 'Same',
+        progress: 10
+    }]
+
+   }
+
 };
+
+function getTotalProgress(data){
+    let total = 0;
+    let students = 0;
+
+    for (let course of Object.values(data)){
+        if(Array.isArray(course)){
+            students += course.length;
+            for (let i = 0; i < course.length; i++){
+                total += course[i].progress;
+            }
+        } else {
+            for (let Subcourse of Object.values(course)){
+                students += Subcourse.length;
+                for (let i = 0; i < Subcourse.length; i++){
+                    total += Subcourse[i].progress;
+                }
+
+            }
+
+        }
+    }
+
+
+
+    return total/students
+}
+console.log(getTotalProgress(students))
