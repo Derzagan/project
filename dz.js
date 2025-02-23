@@ -1,20 +1,15 @@
-function fib(n) {
-    if ( n <= 0){
-        return 0;
-    }else if (n == 1){
+function FacktNum(n){
+    if (n % 1 !== 0 && typeof n === 'number'){
+        return " enter a number ";
+    } else if( n <= 0) {
         return 1;
-    }
-    let a = 0,
-    b = 1;
-    for (let i = 1; i < n; i++){
-        a, b = a + b;
-        return b;
-
+    }else {
+        return n *  FacktNum(n-1)
     }
 
 
-
-    
 }
-res = fib(5);
-console.log(res)
+
+
+let x = FacktNum(5);
+console.log(x)
