@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" container="width=device-width, initial-scale=1.0">
+    <title>Lab1</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="lab1.js" defer></script>
+    <style media="screen">
+        .container {
+            width: 600px;
+            height: 550px;
+            border: 5px solid #00df13;
+        }
+  </style>
+</head>
+<body width = "80%" align = "center">
+    <br>
+    Это оценки студентов по математике, чтению 
+    <div id = "Random_var">
+    </div>
+    <br>
+        Это низкие баллы (x < 50) красный круг
+    <div id = "pairs_small">
+    </div>
+    <br>
+        Это проходные баллы (x >= 50) зеленый квадрат
+    <div id = "pairs_big">
+    </div>
+    <br>
+    <br>
+        средний балл по математике, чтению
+    <div id = "pairs_average">
+    </div>
+    <br>
+    <svg></svg>
+</body>
+</html>
